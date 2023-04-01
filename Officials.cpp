@@ -293,5 +293,8 @@ void main()
 		
 	}
 
+	system("pause");
+	cout << endl;
+
 
 }
