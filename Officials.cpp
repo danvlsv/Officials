@@ -283,7 +283,7 @@ void main()
 		{
 			cout << "Получившаяся иерархия министерства:\n\n";
 			officials_print(Head, 0); // вывод дерева чиновников
-			cout <<endl<<endl<<string(20, '-');
+			cout << endl<<string(20, '-');
 			cout << endl << endl;
 			minim_bribe(Head); // поиск способов дачи минимальной взятки
 			cout << "Возможный порядок получения подписей:\n\n";
