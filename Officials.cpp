@@ -8,7 +8,7 @@
 using namespace std;
 
 
-struct Node // каждый чиновник
+struct Node // структура каждого чиновника
 {
 	int id; // id чиновника
 	string name; // фамилия чиновника
