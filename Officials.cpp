@@ -289,7 +289,11 @@ void main()
 			fill = AddToTree(Head, inputs[i], officials, i);
 
 			if (fill == false) // если была ошибка при создании дерева
+			{
 				break;
+				return;
+			}
+			
 		}
 
 		if (fill == true) // если ошибок при создании не было
