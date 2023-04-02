@@ -300,6 +300,7 @@ void main()
 
 		if (fill == true) // если ошибок при создании не было
 		{
+			system("cls");
 			cout << "Получившаяся иерархия министерства:\n\n";
 			officials_print(Head, 0); // вывод дерева чиновников
 			cout << endl<<string(20, '-');
