@@ -76,33 +76,38 @@ bool AddToTree(PNode& Tree, string entry, PNode* officials, int i)
 	
 	if (numb_check(id)==false) // проверка правильности заполнения id
 	{
-		cout << "Ошибка в id, строка " << i + 2;
+		cout << "Ошибка в id, строка " << i + 2 << endl << endl;
+		system("pause");
 		return false;
 	}
 
 	if (i != (stoi(id) - 1)) // если id идут не по порядку
 	{
-		cout << "Ошибка в id (неверный порядок чиновников), строка " << i + 2;
+		cout << "Ошибка в id (неверный порядок чиновников), строка " << i + 2 << endl << endl;
+		system("pause");
 		return false;
 	}
 		
 
 	if (numb_check(boss) == false) // проверка правильности заполнения boss
 	{
-		cout << "Ошибка в id руководителя, строка " << i + 2;
+		cout << "Ошибка в id руководителя, строка " << i + 2 << endl << endl;
+		system("pause");
 		return false;
 	}
 
 	// если в векторе нет такого чиновника и при этом текущий чиновник не является главным
 	if ((officials[stoi(boss)-1]==nullptr) and (stoi(id)!=1)) 
 	{
-		cout << "Ошибка в id руководителя (такого руководителя нет), строка " << i + 2;
+		cout << "Ошибка в id руководителя (такого руководителя нет), строка " << i + 2 << endl << endl;
+		system("pause");
 		return false;
 	}
 	
 	if (numb_check(bribe) == false) // проверка правильности заполнения взятки
 	{
-		cout << "Ошибка в написании взятки, строка " << i + 2;
+		cout << "Ошибка в написании взятки, строка " << i + 2 << endl<<endl;
+		system("pause");
 		return false;
 	}
 
@@ -221,6 +226,7 @@ void main()
 		if ((numb_check(off) == false) or (off=="")) // проверка на то, что  впервой строке находится число (кол-во чиновников)
 		{
 			cout << "Неверно введено количество чиновников\n\n";
+			system("pause");
 			return;
 		}
 		
@@ -229,6 +235,7 @@ void main()
 	else //если файл пустой
 	{
 		cout << "Файл пуст!";
+		system("pause");
 		return;
 		check = true;
 	}
@@ -262,8 +269,11 @@ void main()
 		check = true;
 	
 	
-	if (check == true) // если ггде-то были ошибки, то выполнение программы заканчивается здесь
+	if (check == true) // если где-то были ошибки, то выполнение программы заканчивается здесь
+	{
 		cout << "Ошибка в заполнении файла\n\n";
+		system("pause");
+	}
 	else
 	{
 		// создание динамического массива с указателями на чиновников, с пустыми указателями по умолчанию
