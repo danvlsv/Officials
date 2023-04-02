@@ -274,6 +274,7 @@ void main()
 	{
 		cout << "Ошибка в заполнении файла\n\n";
 		system("pause");
+		return;
 	}
 	else
 	{
