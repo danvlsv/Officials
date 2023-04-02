@@ -112,6 +112,7 @@ bool AddToTree(PNode& Tree, string entry, PNode* officials, int i)
 		Tree = new Node;
 		Tree->id = stoi(id);
 		Tree->name = name;
+		Tree->flag = true;
 		Tree->employer = NULL; // т.к. у главного нет руководителя
 		Tree->bribe = stoi(bribe);
 		officials[stoi(id) - 1] = Tree; // добавление в вектор со всеми чиновниками
