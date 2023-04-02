@@ -223,7 +223,7 @@ void main()
 	bool check = false; // равна false, пока нет ошибок в файле
 	if (getline(f, off)) // если файл не пустой
 	{
-		if ((numb_check(off) == false) or (off=="")) // проверка на то, что  впервой строке находится число (кол-во чиновников)
+		if ((numb_check(off) == false) and (off!="")) // проверка на то, что  впервой строке находится число (кол-во чиновников)
 		{
 			cout << "Неверно введено количество чиновников\n\n";
 			system("pause");
@@ -234,7 +234,7 @@ void main()
 	}
 	else //если файл пустой
 	{
-		cout << "Файл пуст!";
+		cout << "Файл пуст!\n\n";
 		system("pause");
 		return;
 		check = true;
