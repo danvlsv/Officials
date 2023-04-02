@@ -77,14 +77,14 @@ bool AddToTree(PNode& Tree, string entry, PNode* officials, int i)
 	if (numb_check(id)==false) // проверка правильности заполнения id
 	{
 		cout << "Ошибка в id, строка " << i + 2 << endl << endl;
-		system("pause");
+		
 		return false;
 	}
 
 	if (i != (stoi(id) - 1)) // если id идут не по порядку
 	{
 		cout << "Ошибка в id (неверный порядок чиновников), строка " << i + 2 << endl << endl;
-		system("pause");
+		
 		return false;
 	}
 		
@@ -92,7 +92,7 @@ bool AddToTree(PNode& Tree, string entry, PNode* officials, int i)
 	if (numb_check(boss) == false) // проверка правильности заполнения boss
 	{
 		cout << "Ошибка в id руководителя, строка " << i + 2 << endl << endl;
-		system("pause");
+		
 		return false;
 	}
 
@@ -100,14 +100,14 @@ bool AddToTree(PNode& Tree, string entry, PNode* officials, int i)
 	if ((stoi(boss)-1>=i) and (stoi(id)!=1)) 
 	{
 		cout << "Ошибка в id руководителя (такого руководителя нет), строка " << i + 2 << endl << endl;
-		system("pause");
+		
 		return false;
 	}
 	
 	if (numb_check(bribe) == false) // проверка правильности заполнения взятки
 	{
 		cout << "Ошибка в написании взятки, строка " << i + 2 << endl<<endl;
-		system("pause");
+		
 		return false;
 	}
 
